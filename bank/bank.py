@@ -5,3 +5,6 @@ def bank(greetings: str) -> None:
 		print("$20")
 	else:
 		print("$100")
+
+greetings = input("Input Greeting: ").lower().split()[0].replace(",","")
+bank(greetings)
