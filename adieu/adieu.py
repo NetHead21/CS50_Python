@@ -18,3 +18,16 @@ def adieu() -> None:
 					final_str += f"{name}, "
 		
 	print(final_str)
+
+
+eoferror = False
+
+while not eoferror:
+	try:
+		name = input().capitalize()
+		input_names.append(name)
+	except EOFError:
+		eoferror = True
+
+adieu()
+
