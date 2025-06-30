@@ -15,3 +15,6 @@ def get_bitcoin_price() -> float:
     except requests.RequestException as e:
         print(f"Error fetching Bitcoin price: {e}")
         sys.exit(1)
+    except (KeyError, ValueError) as e:
+        print(f"Error parsing Bitcoin price data: {e}")
+        sys.exit(1)
