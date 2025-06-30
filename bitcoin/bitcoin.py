@@ -12,3 +12,6 @@ def get_bitcoin_price() -> float:
         data = response.json()
         bitcoin_price = data["bpi"]["USD"]["rate_float"]
         return float(bitcoin_price)
+    except requests.RequestException as e:
+        print(f"Error fetching Bitcoin price: {e}")
+        sys.exit(1)
