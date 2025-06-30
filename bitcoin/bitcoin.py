@@ -40,4 +40,8 @@ def main():
 
         bitcoin_amount = calculate_bitcoin_amount(usd_amount)
         print(f"{bitcoin_amount:.4f}")
+    except ValueError:
+        print("Error: Command-line argument is not a valid number")
+        sys.exit(1)
+
     
