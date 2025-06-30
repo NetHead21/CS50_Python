@@ -28,3 +28,6 @@ def calculate_bitcoin_amount(usd_amount: float) -> float:
 
 def main():
     """Main function to handle command line arguments and display results."""
+    if len(sys.argv) != 2:
+        print("Usage: python bitcoin.py <USD_amount>")
+        sys.exit(1)
