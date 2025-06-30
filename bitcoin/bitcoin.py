@@ -44,4 +44,5 @@ def main():
         print("Error: Command-line argument is not a valid number")
         sys.exit(1)
 
-    
+if __name__ == "__main__":
+    main()
