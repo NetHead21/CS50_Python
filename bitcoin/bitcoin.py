@@ -31,3 +31,10 @@ def main():
     if len(sys.argv) != 2:
         print("Usage: python bitcoin.py <USD_amount>")
         sys.exit(1)
+        
+    try:
+        usd_amount = float(sys.argv[1])
+        if usd_amount < 0:
+            print("Error: Amount must be non-negative")
+            sys.exit(1)
+    
