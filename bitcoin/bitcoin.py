@@ -19,7 +19,12 @@ def get_bitcoin_price() -> float:
         print(f"Error parsing Bitcoin price data: {e}")
         sys.exit(1)
 
+
 def calculate_bitcoin_amount(usd_amount: float) -> float:
     """Calculate how much Bitcoin can be bought with the given USD amount."""
     bitcoin_price = get_bitcoin_price()
     return usd_amount / bitcoin_price
+
+
+def main():
+    """Main function to handle command line arguments and display results."""
