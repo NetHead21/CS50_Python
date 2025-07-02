@@ -40,3 +40,9 @@ def vending_machine():
 
 def main():
     """Main function to run the vending machine."""
+    try:
+        vending_machine()
+    except KeyboardInterrupt:
+        print("\nOperation cancelled.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
