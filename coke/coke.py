@@ -37,3 +37,6 @@ def vending_machine():
             print(f"Amount Due: {amount_due}")
     
     print("Thank you!")
+
+def main():
+    """Main function to run the vending machine."""
