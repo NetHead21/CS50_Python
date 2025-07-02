@@ -19,3 +19,5 @@ def get_valid_coin_input() -> int:
 
 def vending_machine():
     """Simulate a Coke vending machine that accepts coins and gives change."""
+    amount_due = COKE_PRICE
+    print(f"Amount Due: {amount_due}")
