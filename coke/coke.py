@@ -15,3 +15,7 @@ def get_valid_coin_input() -> int:
                 
         except ValueError:
             print("Please enter a valid number")
+
+
+def vending_machine():
+    """Simulate a Coke vending machine that accepts coins and gives change."""
