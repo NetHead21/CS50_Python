@@ -21,3 +21,19 @@ def vending_machine():
     """Simulate a Coke vending machine that accepts coins and gives change."""
     amount_due = COKE_PRICE
     print(f"Amount Due: {amount_due}")
+
+    while amount_due > 0:
+        coin = get_valid_coin_input()
+        
+        if coin >= amount_due:
+            # Customer paid exact amount or overpaid
+            change = coin - amount_due
+            if change > 0:
+                print(f"Change Owed: {change}")
+            amount_due = 0
+        else:
+            # Customer needs to pay more
+            amount_due -= coin
+            print(f"Amount Due: {amount_due}")
+    
+    print("Thank you!")
